@@ -1,0 +1,574 @@
+/*Fontes*/
+@font-face{
+  font-family: 'Type';
+  src:url('JAi_____.TTF');
+}
+
+/*Alterando as cores do site*/
+
+html, body{
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(46, 152, 184);
+    /*overflow: hidden;*/
+}
+
+/*Navbar da tela Inicial*/
+nav.navbarini{
+    margin-top: 1%;
+    display: table;
+    height: auto;
+    flex-direction:column;
+    text-align: center;
+    /*Logo do Petshop*/
+    #ftnavbar{
+        width: 20%;
+        
+    }
+}
+
+h1{
+  color: black;
+  font-weight: bolder;
+  font-size: 60px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+form{
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: -1px 0 0 rgb(255, 255, 255) , 2px 2px 4px 1px rgba(0, 0, 0, 0.562);
+    label{
+      text-align: center;
+      font-family: 'Type';
+        text-decoration: none;
+        color: black;
+        font-size:large;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    h1{
+      color: black;
+      font-weight: bolder;
+      font-size: 60px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }h3{
+      color: black;
+      font-weight: bolder;
+      font-size: 40px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+    /*Text box*/
+    input{
+        place-content: green;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        font-weight: bolder;
+        font-size: .9vw;
+        color: rgb(47, 128, 47);
+        background-color: rgba(100, 178, 202, 0.76);
+        box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+        border-radius: 0.4vw;
+        border: none;
+        outline: none;
+        padding: 0.4vw;
+        max-width: 300px;
+        transition: .4s;
+        text-align: center;
+      }
+      input::placeholder{
+        color: rgb(47, 128, 47);
+      }
+
+      input[type="text"] {
+            /* Adicionando largura específica para o input de texto */
+            width: calc(100% - 13px);
+            /* Calculando a largura do input menos a margem direita */
+            color: rgb(47, 128, 47);
+        }
+
+      input[type="number"] {
+            /* Adicionando largura específica para o input de texto */
+            width: calc(100% - 13px);
+            /* Calculando a largura do input menos a margem direita */
+            color: rgb(47, 128, 47);
+        }
+
+      input[type="date"] {
+            /* Adicionando largura específica para o input de texto */
+            width: calc(100% - 13px);
+            /* Calculando a largura do input menos a margem direita */
+            color: rgb(47, 128, 47);
+        }
+
+      input[type="email"] {
+            /* Adicionando largura específica para o input de texto */
+            width: calc(100% - 13px);
+            /* Calculando a largura do input menos a margem direita */
+            color: rgb(47, 128, 47);
+        }
+
+        input[type="password"] {
+            /* Adicionando largura específica para o input de senha */
+            width: calc(100% - 9px);
+            /* Calculando a largura do input menos a margem direita */
+            color: rgb(47, 128, 47);
+        }
+
+      input:hover {
+        background-color: rgba(100, 178, 202, 0.76);
+        color: rgb(47, 128, 47);
+      }
+
+      input:focus {
+        box-shadow: 0 0 0 .10vw rgba(135, 207, 235, 0.186);
+        background-color: rgba(100, 178, 202, 0.76);
+        color: rgb(47, 128, 47);
+        outline: 3px solid rgb(47, 128, 47);
+      }
+
+    #Descricao_Servico{
+      place-content: green;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        font-weight: bolder;
+        font-size: .9vw;
+        color: rgb(47, 128, 47);
+        background-color: rgba(100, 178, 202, 0.76);
+        box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+        border-radius: 0.4vw;
+        border: none;
+        outline: none;  
+        padding: 0.4vw;
+        max-width: 275px;
+        transition: .4s;
+        text-align: left;
+      }
+      #Descricao_Servico::placeholder{
+        color: rgb(47, 128, 47);
+      }
+
+      #Descricao_Servico[type="text"] {
+            /* Adicionando largura específica para o input de texto */
+            width: calc(100% - 15px);
+            /* Calculando a largura do input menos a margem direita */
+            color: rgb(47, 128, 47);
+        }
+
+    /*botão enviar*/
+    .button {
+      position: relative;
+      padding: 10px 30px 10px;
+      border-radius: 6px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      background-color: orangered;
+      transition: all 0.2s ease;
+    }
+    .button:active {
+        transform: scale(0.96);
+    }
+    .button:hover{
+      position: relative;
+      padding: 10px 30px 10px;
+      border-radius: 6px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      background-color: orangered;
+      transition: all 0.2s ease;
+    }
+    .button:focus {
+        box-shadow: 0 0 0 .10vw rgba(135, 207, 235, 0.186);
+        background-color: orangered;
+        color: white;
+        outline: 3px solid rgb(47, 128, 47);
+      }
+
+      /*checkbox*/
+      .checkbox-container {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        user-select: none;
+      }
+      
+      .custom-checkbox {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #fff;
+        border: 2px solid orangered;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+      
+      .custom-checkbox:checked ~ .checkmark {
+        background-color: rgb(13, 226, 13);
+        box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
+        border-color: rgb(47, 128, 47);
+      }
+      
+      .custom-checkbox:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+      @keyframes checkAnim {
+        0% {
+          height: 0;
+        }
+      
+        100% {
+          height: 10px;
+        }
+      }
+      
+      .custom-checkbox:checked ~ .checkmark:after {
+        animation: checkAnim 0.2s forwards;
+      }
+      
+      /*radio*/
+      .radio-button {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 10px;
+        position: relative;
+        align-items: center;
+        color: black;
+      }
+      
+      .radio-button input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+      }
+      
+      .radio {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid orangered;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        transform: translateZ(-25px);
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .radio::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        top: 7px;
+        left: 7px;
+        border-radius: 50%;
+        background-color:  white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .radio-button input[type="radio"]:checked + .radio {
+        border-color: #398050;
+        transform: translateZ(0px);
+        background-color: rgb(13, 226, 13);
+      }
+      
+      .radio-button input[type="radio"]:checked + .radio::before {
+        opacity: 1;
+      }
+      select{
+        border: 0 solid transparent;
+        outline: none;
+        background-color: transparent;
+        color: rgb(11, 158, 203);
+        font-size: medium;
+        border-radius: 5px;
+        transition: 0.2s;
+        font-weight: bolder;
+      }
+      select:hover{
+        background-color: rgba(56, 162, 194, 0.76);
+        color: white;
+        transition: 0.2s;
+      }
+}
+
+    /*Menu lateral*/
+    nav.menu-lateral{
+      margin-top: -2%;
+      position:fixed;
+      width: 85px;
+      height: 100vh;
+      background-color: rgb(255, 255, 255);
+      padding: 40px 0 40px 1%;
+      box-shadow: 0px 0 0 rgb(255, 255, 255) , 3px -8em 1em rgb(0, 0, 0);
+      float:left;
+      left: 0;
+      transition: .4s;
+      overflow: hidden;
+      overflow-y: scroll;
+      white-space: nowrap;
+}
+    nav.menu-lateral:hover{
+      width: 300px;
+      transition: .4s;
+      
+    }
+
+    nav.menu-lateral::-webkit-scrollbar{
+      visibility: hidden;
+    }
+
+    ul{
+      height: 100%;
+      list-style-type: none;
+    }
+
+    ul li.item-menu{
+      transition:.2s;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+    }
+    ul li.item-menu:hover{
+      background-color: rgb(63, 148, 63);
+      transition:.2s;
+      a .txt-link{
+        margin-left:30px;
+        color: white;
+        transition: .2s;
+      }
+    }
+    ul li.item-menu a{
+      color:white;
+      text-decoration: none;
+      font-size: 20px;
+      padding:20px 4%;
+      font-family: 'BloggerSans-Bold';
+      display: flex;
+      line-height: 40px;
+    }
+    ul li.item-menu a .txt-link{
+      margin-left:10px;
+      color: rgb(79, 196, 79);
+      transition: .2s;
+      font-weight: bolder;
+    }
+
+    /*Botão de sair*/
+    ul li.item-menuSAIR{
+      transition:.2s;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+    }
+    ul li.item-menuSAIR:hover{
+      background-color: rgb(255, 0, 0);
+      transition:.2s;
+    .txt-linkSAIR{
+        margin-left:30px;
+        color: rgb(255, 255, 255);
+        transition: .2s;
+      }
+    }
+    ul li.item-menuSAIR a{
+      color:rgb(255, 255, 255);
+      text-decoration: none;
+      font-size: 20px;
+      padding:20px 4%;
+      font-family: 'BloggerSans-Bold';
+      display: flex;
+      line-height: 40px;
+      color: rgb(255, 0, 0);
+    }
+    ul li.item-menuSAIR a .txt-linkSAIR{
+      margin-left:10px;
+      color: rgb(255, 0, 0);
+      transition: .2s;
+      font-weight: bolder;
+    }
+
+    /*Menu com dados do usuário*/
+    #dados_sec{
+      background: white;
+      width: 40%;
+      font-size: x-large;
+      font-family: 'Type';
+      p{
+        font-family: 'Type';
+        font-weight: lighter;
+        font-size: 22px;
+      }
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos do rodapé */
+    footer {
+      background-color:#ffffff;
+      color: rgb(47, 128, 47);
+      text-align: center;
+      padding: 0;
+      margin-top: 3%;
+      border-top: 4px solid rgb(63, 148, 63);;
+    }
+
+  /*TABELAS*/
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    font-family: 'Trebuchet MS';
+    background-color: white;
+    border-radius: 25px;             
+    overflow: hidden; 
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
+    box-shadow: 0px 0px 10% rgba(0, 0, 0, 0.1);
+  }
+
+  table tr:hover {
+      background-color: rgba(71, 255, 71, 0.301);
+      color: black;
+      .view-td {
+        border: 0 solid transparent;
+        outline: none;
+        background-color: white;
+        color: white;
+        font-size: larger;
+        border-radius: 5px;
+        transition: 0s;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    .view-td:hover {
+      background-color: white;
+      color: #fe8330;
+      transition: .2s;
+      .view {
+        color: #fe8330;
+        font-size: larger;
+        transition: .2s;
+    }
+  }
+  }
+
+  th, td {
+      border: none;
+      padding: 8px;
+      text-align: center;           
+  }
+
+  th {
+      background-color:#fe8330;
+      text-align: center;
+      color: white;
+      border-style: hidden;
+      font-weight: bolder;
+  }
+
+  .view {
+      border: 0 solid transparent;
+      outline: none;
+      background-color: white;
+      color: #fe8330;
+      font-size: large;
+      border-radius: 5px;
+      transition: .2s;
+      font-weight: bolder;
+      text-decoration: none;
+  }
+
+  .view-td {
+      border: 0 solid transparent;
+      outline: none;
+      background-color: white;
+      color: #fe8330;
+      font-size: larger;
+      border-radius: 5px;
+      transition: .2s;
+      font-weight: bolder;
+      text-decoration: none;
+  }
+
+
+  .pesquisar{
+    input{
+      background-color: white;
+      color: black;
+      box-shadow: none;
+      border-color: black;
+      border-style: solid;
+      border: 10px;
+    }
+    input[type='text']{
+      background-color: white;
+      color: black;
+      box-shadow: none;
+      border-color: black;
+      border-style: solid;
+      border: 10px;
+      outline: 1px solid rgba(0, 0, 0, 0.171);
+    }
+    input::placeholder{
+      color: gray;
+    }
+    input:hover{
+      background-color: #ffffff;
+      color: black;
+    }
+  }
+
+  textarea{
+    max-width: 287px;
+    place-content: green;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        font-weight: bolder;
+        font-size: .9vw;
+        color: rgb(47, 128, 47);
+        background-color: rgba(100, 178, 202, 0.76);
+        box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+        border-radius: 0.4vw;
+        border: none;
+        outline: none;  
+        padding: 0.4vw;
+        max-width: 275px;
+        transition: .4s;
+        text-align: left;
+  }
+  

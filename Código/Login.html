@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*Fontes*/
+        @font-face{
+        font-family: 'Type';
+        src:url('.CSS/JAi_____.TTF');
+        }
+        @font-face{
+        font-family: 'ArmWrestler';
+        src:url('.CSS/ArmWrestler.ttf');
+        }
+
+        nav.navbarini {
+            margin-top: 1%;
+            display: table;
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+
+            /*Logo do Petshop*/
+            #ftnavbar {
+                width: 20%;
+            }
+        }
+
+        /*Alterando as cores do site*/
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: rgb(46, 152, 184);
+            overflow: hidden;
+        }
+
+        /* Estilos para o formulário de login */
+        form {
+            background-color: white;
+            width: 30%;
+            border-radius: 10px;
+            text-align: center;
+            /* Alinhamento do texto centralizado */
+            margin: 0 auto;
+            margin-top: 2%;
+            /* Centraliza o formulário na horizontal */
+            padding: 20px;
+            /* Adiciona algum espaço interno ao formulário */
+        }
+
+        label {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+        }
+
+        h1 {
+            color: black;
+            font-weight: bolder;
+            font-size: 65px;
+            font-family: 'Trebuchet MS';
+            letter-spacing: 2px;
+        }
+
+        input {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-weight: 500;
+            font-size: .8vw;
+            color: #fff;
+            background-color: #fe8330;
+            box-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5), 0 0 0 .15vw transparent;
+            border-radius: 0.4vw;
+            border: none;
+            outline: none;
+            padding: 0.4vw;
+            max-width: 300px;
+            transition: .4s;
+            margin-right: 5%;
+            text-align: center;
+            padding-right: -10px;
+        }
+
+        input[type="text"] {
+            /* Adicionando largura específica para o input de texto */
+            width: calc(100% - 13px);
+            /* Calculando a largura do input menos a margem direita */
+        }
+
+        input[type="password"] {
+            /* Adicionando largura específica para o input de senha */
+            width: calc(100% - 9px);
+            /* Calculando a largura do input menos a margem direita */
+        }
+
+        input:hover {
+            box-shadow: 0 0 0 .10vw rgba(135, 207, 235, 0.186);
+            background-color: rgba(159, 219, 238, 0.829);
+            outline: 5px solid #fe8330;
+            color: #000000;
+        }
+
+        input:focus {
+            box-shadow: 0 0 0 .15vw skyblue;
+            outline: 5px solid #f77721;
+        }
+
+        select {
+            border: 0 solid transparent;
+            outline: none;
+            background-color: transparent;
+            color: #f18035;
+            font-size: larger;
+            border-radius: 5px;
+            transition: 0.2s;
+            font-weight: bolder;
+        }
+
+        select:hover {
+            background-color: #fe8330;
+            color: white;
+            transition: 0.2s;
+        }
+
+        /* Estilos para o botão de enviar */
+        button {
+            position: relative;
+            padding: 10px 22px;
+            border-radius: 6px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: orangered;
+            transition: all 0.2s ease;
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+
+        button:before,
+        button:after {
+            position: absolute;
+            content: "";
+            width: 150%;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: -1000;
+            background-repeat: no-repeat;
+        }
+
+        button:hover:before {
+            top: -70%;
+            background-image: radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, transparent 20%, orangered 20%, transparent 30%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, transparent 10%, orangered 15%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+                10% 10%, 18% 18%;
+            background-position: 50% 120%;
+            animation: greentopBubbles 0.6s ease;
+        }
+
+        @keyframes greentopBubbles {
+            0% {
+                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+                    40% 90%, 55% 90%, 70% 90%;
+            }
+
+            50% {
+                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                    50% 50%, 65% 20%, 90% 30%;
+            }
+
+            100% {
+                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+                    50% 40%, 65% 10%, 90% 20%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+
+        button:hover::after {
+            bottom: -70%;
+            background-image: radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, transparent 10%, orangered 15%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%),
+                radial-gradient(circle, orangered 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+            background-position: 50% 0%;
+            animation: greenbottomBubbles 0.6s ease;
+        }
+
+        @keyframes greenbottomBubbles {
+            0% {
+                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                    70% -10%, 70% 0%;
+            }
+
+            50% {
+                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+                    105% 0%;
+            }
+
+            100% {
+                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+                    110% 10%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+
+        /* Estilos para a opção de mostrar senha */
+        .mostrar-senha {
+            display: inline-block;
+            font-size: 14px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        /*------ Settings ------*/
+        .container {
+        display: flex;
+        float: right;
+        position: absolute;
+        margin-top: 17px;
+        margin-left: -38px;
+        margin-right: 50px;
+        --color: #fe8330;
+        --size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        font-size: var(--size);
+        user-select: none;
+        fill: var(--color);
+        padding-left: -500px;
+        padding-right: 2px;
+        }
+
+        .container .eye {
+        position: absolute;
+        animation: keyframes-fill .5s;
+        }
+
+        .container .eye-slash {
+        position: absolute;
+        animation: keyframes-fill .5s;
+        display: none;
+        }
+
+        /* ------ On check event ------ */
+        .container input:checked ~ .eye {
+        display: none;
+        }
+
+        .container input:checked ~ .eye-slash {
+        display: block;
+        }
+
+        /* ------ Hide the default checkbox ------ */
+        .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        }
+
+        /* ------ Animation ------ */
+        @keyframes keyframes-fill {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+        }
+
+        footer {
+        background-color:#ffffff;
+        color: rgb(0, 138, 0);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 13%;
+        border-top: 2px solid #83C55D;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body>
+    <nav class="navbarini">
+        <img id="ftnavbar" src=".CSS/FTINI.png">
+    </nav>
+    <form action="ValidarLogin.php" method="POST">
+        <h1>Login</h1>
+        <label for="CPF">CPF: </label>
+        <input type="text" name="CPF" id="CPF" required><br><br><br>
+        <label for="Senha">Senha:</label>
+        <input type="password" name="Senha" id="Senha" required>
+        <label class="container">
+            <input type="checkbox" checked="checked" onclick="mostrarSenha()">
+            <svg class="eye" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                <path
+                    d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z">
+                </path>
+            </svg>
+            <svg class="eye-slash" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                <path
+                    d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z">
+                </path>
+            </svg>
+        </label><br><br>
+        <label for="TipoUsuario">Tipo de Usuário:</label>
+        <select name="TipoUsuario" id="TipoUsuario" required>
+            <option value="Administrador">Administrador</option>
+            <option value="Secretario">Secretário</option>
+        </select><br><br><br>
+        <input type="submit" value="Entrar">
+    </form><br><br>
+
+    <footer>
+        <div>
+            &copy; 2024 Mulato'S Pet Shop. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        function mostrarSenha() {
+            var senhaInput = document.getElementById("Senha");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>
