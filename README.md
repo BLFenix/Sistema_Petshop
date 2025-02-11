@@ -1,6 +1,6 @@
 # Sistema de Petshop
 
-![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge&logo=github&logoColor=white&color=blue&labelColor=black)
+![Status do Projeto](https://img.shields.io/badge/Status-Finalizado-blue?style=for-the-badge&logo=github&logoColor=white&color=blue&labelColor=black)
 ![Linguagens](https://img.shields.io/badge/Linguagens-JS%20|%20PHP%20|%20HTML5%20|%20CSS3-informational?style=for-the-badge&color=purple&labelColor=black)
 ![Tamanho do Repositório](https://img.shields.io/badge/Tamanho%20do%20Repositório-2.3%20MB-success?style=for-the-badge&color=green&labelColor=black)
 
